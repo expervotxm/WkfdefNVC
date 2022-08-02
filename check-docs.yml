@@ -19,12 +19,10 @@ jobs:
       - name: Using Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
 
       - name: Generate Extensions API Reference using typedocs
         run: |
            yarn install
-           yarn typedocs-extensions-api
 
       - name: Verify that the markdown is valid
         run: |
